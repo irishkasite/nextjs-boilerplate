@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-
+<div id="heart">❤</div>
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -40,6 +40,7 @@ function createFloatingHeart() {
     newHeart.remove();
   }, 2000);
 }
+
 export default function RootLayout({
   children,
 }: {
