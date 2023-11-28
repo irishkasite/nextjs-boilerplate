@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div id="heart">❤</div>
-      <script type="text/javascript" src="https://pastebin.com/raw/UhWeL89A" async />
+      <script type="text/javascript" src="./script.js" async />
     </main>
   )
 }
