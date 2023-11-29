@@ -1,11 +1,13 @@
 const heartContainer = document.body;
 const heartIcon = document.getElementById('heart');
 const scoreContainer = document.getElementById('score');
+const initScore = window.localStorage.getItem('score');
+
+if(isNaN(parseInt(window.localStorage.getItem('score'))))
+  window.localStorage.setItem('score', 0);
+
 
 let score = parseInt(window.localStorage.getItem('score'));
-
-if(score == null)
-  score = 0;
 
 scoreContainer.innerText = score.toString();
 
