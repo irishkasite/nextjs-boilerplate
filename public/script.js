@@ -1,5 +1,13 @@
 const heartContainer = document.body;
 const heartIcon = document.getElementById('heart');
+const scoreContainer = document.getElementById('score');
+
+let score = parseInt(window.localStorage.getItem('score'));
+
+if(score == null)
+  score = 0;
+
+scoreContainer.innerText = score.toString();
 
 heartIcon.addEventListener('mouseover', () => {
   heartIcon.style.transform = 'scale(1.2)';
@@ -11,6 +19,9 @@ heartIcon.addEventListener('mouseout', () => {
 
 heartIcon.addEventListener('click', () => {
   createFloatingHeart();
+  score += 1;
+  window.localStorage.setItem('score', score.toString());
+  scoreContainer.innerText = score.toString();
 });
 
 function createFloatingHeart() {
